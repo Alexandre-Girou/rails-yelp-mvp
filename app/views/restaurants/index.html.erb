@@ -1,0 +1,11 @@
+<h1>All Restaurants 🚽 :</h1>
+
+<ul>
+  <% @restaurants.each do |r| %>
+  <li>Name : <%= r.name %></li>
+  <li>Category : <%= r.category %></li>
+  <li>Address : <%= r.address %></li>
+  <%= link_to "See details", restaurant_path(r), class: "btn btn-primary"%>
+  <hr>
+  <% end %>
+</ul>
